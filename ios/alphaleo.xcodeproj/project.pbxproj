@@ -1,0 +1,815 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B2B776E1F35617600621568 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B776D1F35617600621568 /* AppDelegate.m */; };
+		0B2B77711F35638800621568 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B77701F35638800621568 /* main.m */; };
+		0B50B7321F34097900E89193 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B50B7311F34097900E89193 /* GoogleService-Info.plist */; };
+		0BD36A641F33C8AB00EF05C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BD36A621F33C8AB00EF05C7 /* Main.storyboard */; };
+		0BD36A661F33C8AB00EF05C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BD36A651F33C8AB00EF05C7 /* Assets.xcassets */; };
+		0BD36A691F33C8AB00EF05C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BD36A671F33C8AB00EF05C7 /* LaunchScreen.storyboard */; };
+		0BD36A741F33C8AB00EF05C7 /* alphaleoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD36A731F33C8AB00EF05C7 /* alphaleoTests.swift */; };
+		0BD36A7F1F33C8AB00EF05C7 /* alphaleoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD36A7E1F33C8AB00EF05C7 /* alphaleoUITests.swift */; };
+		401BEC8E38F14B056154428C /* libPods-alphaleoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8271C782C7A891C6876A5B /* libPods-alphaleoTests.a */; };
+		CA0833B9565D1EDE98A7413F /* libPods-alphaleoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 225E1F12DE1951BA877F3874 /* libPods-alphaleoUITests.a */; };
+		D1089906FF7E65B86A860AA0 /* libPods-alphaleo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE72A48156B27D8C9BAF323A /* libPods-alphaleo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0BD36A701F33C8AB00EF05C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BD36A531F33C8AB00EF05C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BD36A5A1F33C8AB00EF05C7;
+			remoteInfo = alphaleo;
+		};
+		0BD36A7B1F33C8AB00EF05C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BD36A531F33C8AB00EF05C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BD36A5A1F33C8AB00EF05C7;
+			remoteInfo = alphaleo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B2B776D1F35617600621568 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0B2B776F1F35618900621568 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0B2B77701F35638800621568 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0B50B7311F34097900E89193 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0BD36A5B1F33C8AB00EF05C7 /* alphaleo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alphaleo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BD36A631F33C8AB00EF05C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0BD36A651F33C8AB00EF05C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0BD36A681F33C8AB00EF05C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0BD36A6A1F33C8AB00EF05C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BD36A6F1F33C8AB00EF05C7 /* alphaleoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = alphaleoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BD36A731F33C8AB00EF05C7 /* alphaleoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alphaleoTests.swift; sourceTree = "<group>"; };
+		0BD36A751F33C8AB00EF05C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BD36A7A1F33C8AB00EF05C7 /* alphaleoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = alphaleoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BD36A7E1F33C8AB00EF05C7 /* alphaleoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alphaleoUITests.swift; sourceTree = "<group>"; };
+		0BD36A801F33C8AB00EF05C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EA7CCB23FBF06A0C0547665 /* Pods-alphaleo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alphaleo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alphaleo/Pods-alphaleo.debug.xcconfig"; sourceTree = "<group>"; };
+		225E1F12DE1951BA877F3874 /* libPods-alphaleoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-alphaleoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CEB54C376DC664CE581CE1F /* Pods-alphaleoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alphaleoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-alphaleoTests/Pods-alphaleoTests.release.xcconfig"; sourceTree = "<group>"; };
+		2D87503140923EC001541335 /* Pods-alphaleoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alphaleoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-alphaleoUITests/Pods-alphaleoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		657B728F7C698F7C812C19CD /* Pods-alphaleoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alphaleoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alphaleoTests/Pods-alphaleoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		915ABDCB59F419DA02FBBC2B /* Pods-alphaleo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alphaleo.release.xcconfig"; path = "Pods/Target Support Files/Pods-alphaleo/Pods-alphaleo.release.xcconfig"; sourceTree = "<group>"; };
+		D705806FA2955C31041F4403 /* Pods-alphaleoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alphaleoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alphaleoUITests/Pods-alphaleoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DD8271C782C7A891C6876A5B /* libPods-alphaleoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-alphaleoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE72A48156B27D8C9BAF323A /* libPods-alphaleo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-alphaleo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0BD36A581F33C8AB00EF05C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1089906FF7E65B86A860AA0 /* libPods-alphaleo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BD36A6C1F33C8AB00EF05C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				401BEC8E38F14B056154428C /* libPods-alphaleoTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BD36A771F33C8AB00EF05C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0833B9565D1EDE98A7413F /* libPods-alphaleoUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A51E040405FB20F49C5508D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1EA7CCB23FBF06A0C0547665 /* Pods-alphaleo.debug.xcconfig */,
+				915ABDCB59F419DA02FBBC2B /* Pods-alphaleo.release.xcconfig */,
+				657B728F7C698F7C812C19CD /* Pods-alphaleoTests.debug.xcconfig */,
+				2CEB54C376DC664CE581CE1F /* Pods-alphaleoTests.release.xcconfig */,
+				D705806FA2955C31041F4403 /* Pods-alphaleoUITests.debug.xcconfig */,
+				2D87503140923EC001541335 /* Pods-alphaleoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		0BD36A521F33C8AB00EF05C7 = {
+			isa = PBXGroup;
+			children = (
+				0BD36A5D1F33C8AB00EF05C7 /* alphaleo */,
+				0BD36A721F33C8AB00EF05C7 /* alphaleoTests */,
+				0BD36A7D1F33C8AB00EF05C7 /* alphaleoUITests */,
+				0BD36A5C1F33C8AB00EF05C7 /* Products */,
+				0A51E040405FB20F49C5508D /* Pods */,
+				3AF8DD02EEB0F03DC305CA78 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0BD36A5C1F33C8AB00EF05C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0BD36A5B1F33C8AB00EF05C7 /* alphaleo.app */,
+				0BD36A6F1F33C8AB00EF05C7 /* alphaleoTests.xctest */,
+				0BD36A7A1F33C8AB00EF05C7 /* alphaleoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0BD36A5D1F33C8AB00EF05C7 /* alphaleo */ = {
+			isa = PBXGroup;
+			children = (
+				0B2B776F1F35618900621568 /* AppDelegate.h */,
+				0B2B776D1F35617600621568 /* AppDelegate.m */,
+				0B2B77701F35638800621568 /* main.m */,
+				0B50B7311F34097900E89193 /* GoogleService-Info.plist */,
+				0BD36A621F33C8AB00EF05C7 /* Main.storyboard */,
+				0BD36A651F33C8AB00EF05C7 /* Assets.xcassets */,
+				0BD36A671F33C8AB00EF05C7 /* LaunchScreen.storyboard */,
+				0BD36A6A1F33C8AB00EF05C7 /* Info.plist */,
+			);
+			path = alphaleo;
+			sourceTree = "<group>";
+		};
+		0BD36A721F33C8AB00EF05C7 /* alphaleoTests */ = {
+			isa = PBXGroup;
+			children = (
+				0BD36A731F33C8AB00EF05C7 /* alphaleoTests.swift */,
+				0BD36A751F33C8AB00EF05C7 /* Info.plist */,
+			);
+			path = alphaleoTests;
+			sourceTree = "<group>";
+		};
+		0BD36A7D1F33C8AB00EF05C7 /* alphaleoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0BD36A7E1F33C8AB00EF05C7 /* alphaleoUITests.swift */,
+				0BD36A801F33C8AB00EF05C7 /* Info.plist */,
+			);
+			path = alphaleoUITests;
+			sourceTree = "<group>";
+		};
+		3AF8DD02EEB0F03DC305CA78 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE72A48156B27D8C9BAF323A /* libPods-alphaleo.a */,
+				DD8271C782C7A891C6876A5B /* libPods-alphaleoTests.a */,
+				225E1F12DE1951BA877F3874 /* libPods-alphaleoUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0BD36A5A1F33C8AB00EF05C7 /* alphaleo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BD36A831F33C8AB00EF05C7 /* Build configuration list for PBXNativeTarget "alphaleo" */;
+			buildPhases = (
+				F02CFF8448E8CB4ABC128B99 /* [CP] Check Pods Manifest.lock */,
+				0BD36A571F33C8AB00EF05C7 /* Sources */,
+				0BD36A581F33C8AB00EF05C7 /* Frameworks */,
+				0BD36A591F33C8AB00EF05C7 /* Resources */,
+				3353D85E40DDD252A7A39DF1 /* [CP] Embed Pods Frameworks */,
+				B1FD93946161F551E79F336B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = alphaleo;
+			productName = alphaleo;
+			productReference = 0BD36A5B1F33C8AB00EF05C7 /* alphaleo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0BD36A6E1F33C8AB00EF05C7 /* alphaleoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BD36A861F33C8AB00EF05C7 /* Build configuration list for PBXNativeTarget "alphaleoTests" */;
+			buildPhases = (
+				338457EF8D8917B5A48CC72C /* [CP] Check Pods Manifest.lock */,
+				0BD36A6B1F33C8AB00EF05C7 /* Sources */,
+				0BD36A6C1F33C8AB00EF05C7 /* Frameworks */,
+				0BD36A6D1F33C8AB00EF05C7 /* Resources */,
+				7EA369E2C7D4B8C550AA5812 /* [CP] Embed Pods Frameworks */,
+				FAAC0BF0B82437EFCDA2A43A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BD36A711F33C8AB00EF05C7 /* PBXTargetDependency */,
+			);
+			name = alphaleoTests;
+			productName = alphaleoTests;
+			productReference = 0BD36A6F1F33C8AB00EF05C7 /* alphaleoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0BD36A791F33C8AB00EF05C7 /* alphaleoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BD36A891F33C8AB00EF05C7 /* Build configuration list for PBXNativeTarget "alphaleoUITests" */;
+			buildPhases = (
+				8EA624363C1D74F0ED935694 /* [CP] Check Pods Manifest.lock */,
+				0BD36A761F33C8AB00EF05C7 /* Sources */,
+				0BD36A771F33C8AB00EF05C7 /* Frameworks */,
+				0BD36A781F33C8AB00EF05C7 /* Resources */,
+				0EDECF8F76CA924CF0FF0D35 /* [CP] Embed Pods Frameworks */,
+				892FC85D97BEBBD321A72E86 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BD36A7C1F33C8AB00EF05C7 /* PBXTargetDependency */,
+			);
+			name = alphaleoUITests;
+			productName = alphaleoUITests;
+			productReference = 0BD36A7A1F33C8AB00EF05C7 /* alphaleoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0BD36A531F33C8AB00EF05C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Alpha Leo Club of Alexandria";
+				TargetAttributes = {
+					0BD36A5A1F33C8AB00EF05C7 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = FZ6F33C7FX;
+						ProvisioningStyle = Automatic;
+					};
+					0BD36A6E1F33C8AB00EF05C7 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = FZ6F33C7FX;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0BD36A5A1F33C8AB00EF05C7;
+					};
+					0BD36A791F33C8AB00EF05C7 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = FZ6F33C7FX;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0BD36A5A1F33C8AB00EF05C7;
+					};
+				};
+			};
+			buildConfigurationList = 0BD36A561F33C8AB00EF05C7 /* Build configuration list for PBXProject "alphaleo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0BD36A521F33C8AB00EF05C7;
+			productRefGroup = 0BD36A5C1F33C8AB00EF05C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0BD36A5A1F33C8AB00EF05C7 /* alphaleo */,
+				0BD36A6E1F33C8AB00EF05C7 /* alphaleoTests */,
+				0BD36A791F33C8AB00EF05C7 /* alphaleoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0BD36A591F33C8AB00EF05C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BD36A691F33C8AB00EF05C7 /* LaunchScreen.storyboard in Resources */,
+				0B50B7321F34097900E89193 /* GoogleService-Info.plist in Resources */,
+				0BD36A661F33C8AB00EF05C7 /* Assets.xcassets in Resources */,
+				0BD36A641F33C8AB00EF05C7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BD36A6D1F33C8AB00EF05C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BD36A781F33C8AB00EF05C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EDECF8F76CA924CF0FF0D35 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-alphaleoUITests/Pods-alphaleoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3353D85E40DDD252A7A39DF1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-alphaleo/Pods-alphaleo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DoubleConversion/DoubleConversion.framework",
+				"${BUILT_PRODUCTS_DIR}/Folly/folly.framework",
+				"${BUILT_PRODUCTS_DIR}/GLog/glog.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/RNFirebase/RNFirebase.framework",
+				"${BUILT_PRODUCTS_DIR}/React/React.framework",
+				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoubleConversion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/folly.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/glog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNFirebase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-alphaleo/Pods-alphaleo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		338457EF8D8917B5A48CC72C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-alphaleoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EA369E2C7D4B8C550AA5812 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-alphaleoTests/Pods-alphaleoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		892FC85D97BEBBD321A72E86 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-alphaleoUITests/Pods-alphaleoUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EA624363C1D74F0ED935694 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-alphaleoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1FD93946161F551E79F336B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-alphaleo/Pods-alphaleo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F02CFF8448E8CB4ABC128B99 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-alphaleo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAAC0BF0B82437EFCDA2A43A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-alphaleoTests/Pods-alphaleoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0BD36A571F33C8AB00EF05C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B2B77711F35638800621568 /* main.m in Sources */,
+				0B2B776E1F35617600621568 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BD36A6B1F33C8AB00EF05C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BD36A741F33C8AB00EF05C7 /* alphaleoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BD36A761F33C8AB00EF05C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BD36A7F1F33C8AB00EF05C7 /* alphaleoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0BD36A711F33C8AB00EF05C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0BD36A5A1F33C8AB00EF05C7 /* alphaleo */;
+			targetProxy = 0BD36A701F33C8AB00EF05C7 /* PBXContainerItemProxy */;
+		};
+		0BD36A7C1F33C8AB00EF05C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0BD36A5A1F33C8AB00EF05C7 /* alphaleo */;
+			targetProxy = 0BD36A7B1F33C8AB00EF05C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0BD36A621F33C8AB00EF05C7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0BD36A631F33C8AB00EF05C7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0BD36A671F33C8AB00EF05C7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0BD36A681F33C8AB00EF05C7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0BD36A811F33C8AB00EF05C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0BD36A821F33C8AB00EF05C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0BD36A841F33C8AB00EF05C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EA7CCB23FBF06A0C0547665 /* Pods-alphaleo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FZ6F33C7FX;
+				GCC_NO_COMMON_BLOCKS = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/Core/Sources",
+					"\"${PODS_ROOT}/boost\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/DoubleConversion\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAuth\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseCore\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseDatabase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseMessaging\"",
+					"\"${PODS_ROOT}/Headers/Public/Folly\"",
+					"\"${PODS_ROOT}/Headers/Public/GLog\"",
+					"\"${PODS_ROOT}/Headers/Public/GTMSessionFetcher\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleToolboxForMac\"",
+					"\"${PODS_ROOT}/Headers/Public/Protobuf\"",
+					"\"${PODS_ROOT}/Headers/Public/RNFirebase\"",
+					"\"${PODS_ROOT}/Headers/Public/React\"",
+					"\"${PODS_ROOT}/Headers/Public/Yoga\"",
+					"\"${PODS_ROOT}/Headers/Public/boost\"",
+					"\"${PODS_ROOT}/Headers/Public/nanopb\"",
+				);
+				INFOPLIST_FILE = alphaleo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.alphaleo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0BD36A851F33C8AB00EF05C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 915ABDCB59F419DA02FBBC2B /* Pods-alphaleo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FZ6F33C7FX;
+				GCC_NO_COMMON_BLOCKS = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/Core/Sources",
+					"\"${PODS_ROOT}/boost\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/DoubleConversion\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAuth\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseCore\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseDatabase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseMessaging\"",
+					"\"${PODS_ROOT}/Headers/Public/Folly\"",
+					"\"${PODS_ROOT}/Headers/Public/GLog\"",
+					"\"${PODS_ROOT}/Headers/Public/GTMSessionFetcher\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleToolboxForMac\"",
+					"\"${PODS_ROOT}/Headers/Public/Protobuf\"",
+					"\"${PODS_ROOT}/Headers/Public/RNFirebase\"",
+					"\"${PODS_ROOT}/Headers/Public/React\"",
+					"\"${PODS_ROOT}/Headers/Public/Yoga\"",
+					"\"${PODS_ROOT}/Headers/Public/boost\"",
+					"\"${PODS_ROOT}/Headers/Public/nanopb\"",
+				);
+				INFOPLIST_FILE = alphaleo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.alphaleo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		0BD36A871F33C8AB00EF05C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 657B728F7C698F7C812C19CD /* Pods-alphaleoTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = FZ6F33C7FX;
+				INFOPLIST_FILE = alphaleoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.alphaleo.alphaleoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/alphaleo.app/alphaleo";
+			};
+			name = Debug;
+		};
+		0BD36A881F33C8AB00EF05C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CEB54C376DC664CE581CE1F /* Pods-alphaleoTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = FZ6F33C7FX;
+				INFOPLIST_FILE = alphaleoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.alphaleo.alphaleoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/alphaleo.app/alphaleo";
+			};
+			name = Release;
+		};
+		0BD36A8A1F33C8AB00EF05C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D705806FA2955C31041F4403 /* Pods-alphaleoUITests.debug.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = FZ6F33C7FX;
+				INFOPLIST_FILE = alphaleoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.alphaleo.alphaleoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = alphaleo;
+			};
+			name = Debug;
+		};
+		0BD36A8B1F33C8AB00EF05C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D87503140923EC001541335 /* Pods-alphaleoUITests.release.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = FZ6F33C7FX;
+				INFOPLIST_FILE = alphaleoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.alphaleo.alphaleoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = alphaleo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0BD36A561F33C8AB00EF05C7 /* Build configuration list for PBXProject "alphaleo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BD36A811F33C8AB00EF05C7 /* Debug */,
+				0BD36A821F33C8AB00EF05C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		0BD36A831F33C8AB00EF05C7 /* Build configuration list for PBXNativeTarget "alphaleo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BD36A841F33C8AB00EF05C7 /* Debug */,
+				0BD36A851F33C8AB00EF05C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		0BD36A861F33C8AB00EF05C7 /* Build configuration list for PBXNativeTarget "alphaleoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BD36A871F33C8AB00EF05C7 /* Debug */,
+				0BD36A881F33C8AB00EF05C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		0BD36A891F33C8AB00EF05C7 /* Build configuration list for PBXNativeTarget "alphaleoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BD36A8A1F33C8AB00EF05C7 /* Debug */,
+				0BD36A8B1F33C8AB00EF05C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0BD36A531F33C8AB00EF05C7 /* Project object */;
+}

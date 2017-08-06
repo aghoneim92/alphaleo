@@ -1,0 +1,10 @@
+[ignore]
+
+[include]
+
+[libs]
+
+[lints]
+sketchy-null=error
+[options]
+esproposal.decorators=ignore
