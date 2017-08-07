@@ -10,7 +10,6 @@
 		0B2B776E1F35617600621568 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B776D1F35617600621568 /* AppDelegate.m */; };
 		0B2B77711F35638800621568 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B77701F35638800621568 /* main.m */; };
 		0B50B7321F34097900E89193 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B50B7311F34097900E89193 /* GoogleService-Info.plist */; };
-		0BD36A641F33C8AB00EF05C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BD36A621F33C8AB00EF05C7 /* Main.storyboard */; };
 		0BD36A661F33C8AB00EF05C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BD36A651F33C8AB00EF05C7 /* Assets.xcassets */; };
 		0BD36A691F33C8AB00EF05C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BD36A671F33C8AB00EF05C7 /* LaunchScreen.storyboard */; };
 		0BD36A741F33C8AB00EF05C7 /* alphaleoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD36A731F33C8AB00EF05C7 /* alphaleoTests.swift */; };
@@ -43,7 +42,6 @@
 		0B2B77701F35638800621568 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0B50B7311F34097900E89193 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0BD36A5B1F33C8AB00EF05C7 /* alphaleo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alphaleo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0BD36A631F33C8AB00EF05C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0BD36A651F33C8AB00EF05C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BD36A681F33C8AB00EF05C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BD36A6A1F33C8AB00EF05C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				0B2B776D1F35617600621568 /* AppDelegate.m */,
 				0B2B77701F35638800621568 /* main.m */,
 				0B50B7311F34097900E89193 /* GoogleService-Info.plist */,
-				0BD36A621F33C8AB00EF05C7 /* Main.storyboard */,
 				0BD36A651F33C8AB00EF05C7 /* Assets.xcassets */,
 				0BD36A671F33C8AB00EF05C7 /* LaunchScreen.storyboard */,
 				0BD36A6A1F33C8AB00EF05C7 /* Info.plist */,
@@ -292,7 +289,6 @@
 				0BD36A691F33C8AB00EF05C7 /* LaunchScreen.storyboard in Resources */,
 				0B50B7321F34097900E89193 /* GoogleService-Info.plist in Resources */,
 				0BD36A661F33C8AB00EF05C7 /* Assets.xcassets in Resources */,
-				0BD36A641F33C8AB00EF05C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,14 +514,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0BD36A621F33C8AB00EF05C7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0BD36A631F33C8AB00EF05C7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0BD36A671F33C8AB00EF05C7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

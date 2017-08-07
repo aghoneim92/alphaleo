@@ -22,27 +22,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_transparent" translatesAutoresizingMaskIntoConstraints="NO" id="lzz-ib-RaK">
-                                <rect key="frame" x="-0.5" y="145.5" width="375" height="375"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lmy-SV-jXd">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="lzz-ib-RaK" secondAttribute="height" id="PwE-ut-bdz"/>
+                                    <constraint firstAttribute="width" secondItem="lmy-SV-jXd" secondAttribute="height" id="mlg-oA-EI6"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.47843137250000001" green="0.1019607843" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="lzz-ib-RaK" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="TtM-pL-3vg"/>
-                            <constraint firstItem="lzz-ib-RaK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="bM9-0E-fev"/>
-                            <constraint firstItem="lzz-ib-RaK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="puz-B7-VMS"/>
+                            <constraint firstAttribute="trailing" secondItem="lmy-SV-jXd" secondAttribute="trailing" id="7QD-Ym-jjP"/>
+                            <constraint firstItem="lmy-SV-jXd" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="FYd-sb-UeY"/>
+                            <constraint firstItem="lmy-SV-jXd" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Wb0-yG-edX"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="logo_transparent" width="639" height="641"/>
-    </resources>
 </document>
