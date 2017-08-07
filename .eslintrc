@@ -6,6 +6,7 @@
     ],
     "parser": "babel-eslint",
     "plugins": [
+        "jest",
         "prettier"
     ],
     "rules": {
@@ -18,9 +19,16 @@
                 "semi": false
             }
         ],
-        "react/prop-types": 0
+        "react/prop-types": 0,
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/valid-expect": "error",
+        "global-require": 0
     },
     "parserOptions": {
         "sourceType": "module"
+    },
+    "env": {
+        "jest/globals": true
     }
 }

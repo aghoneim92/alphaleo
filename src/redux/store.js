@@ -7,14 +7,14 @@ import { reactReduxFirebase, firebaseStateReducer } from 'react-redux-firebase'
 import { createStore, compose } from 'redux'
 
 const configurationOptions = {
-  debug: true
+  debug: true,
 }
 
 const rootReducer = combineReducers({
-  firebase: firebaseStateReducer
+  firebase: firebaseStateReducer,
 })
 
-const firebase = RNFirebase.initializeApp(configurationOptions);
+const firebase = RNFirebase.initializeApp(configurationOptions)
 
 const config = {
   userProfile: 'users', // firebase root where user profiles are stored

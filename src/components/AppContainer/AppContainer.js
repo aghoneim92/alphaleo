@@ -1,48 +1,54 @@
 // @flow
 import React, { Component } from 'react'
 
-import { View, Text } from 'react-native'
+import { View, LayoutAnimation, Keyboard } from 'react-native'
 
-import { connect } from 'react-redux'
-import { firebaseConnect } from 'react-redux-firebase'
+import enhancer from './enhancer'
 
-@firebaseConnect()
-@connect(({ firebase: { auth } }) => ({
-  auth,
-}))
-export default class AppContainer extends Component {
-  static propTypes: {
-    auth: {
-      isEmpty: boolean,
-      isLoaded: boolean,
-    },
+export class EnhancedAppContainer extends Component {
+  state = {
+    keyboardHeight: 0,
+  }
+
+  componentDidMount() {
+    this.keyboardShowListener = Keyboard.addListener(
+      'keyboardWillShow',
+      this.handleKeyboardHeightChange,
+    )
+    this.keyboardHideListener = Keyboard.addListener(
+      'keyboardWillHide',
+      this.handleKeyboardHeightChange,
+    )
+  }
+
+  componentWillUnmount() {
+    this.keyboardShowListener.remove()
+    this.keyboardHideListener.remove()
+  }
+
+  keyboardShowListener: { remove: Function }
+  keyboardHideListener: { remove: Function }
+
+  handleKeyboardHeightChange = ({
+    endCoordinates: { height },
+  }: {
+    // eslint-disable-next-line react/no-unused-prop-types
+    endCoordinates: { height: number },
+  }) => {
+    LayoutAnimation.easeInEaseOut()
+    this.setState({ keyboardHeight: height })
   }
 
   render() {
-    const { auth: { isLoaded, isEmpty } } = this.props
-
-    console.log('isLoaded', isLoaded, 'isempty', isEmpty)
-
-    if (isLoaded) {
-      if (isEmpty) {
-        return (
-          <View style={{ flex: 1 }}>
-            <Text>Login</Text>
-          </View>
-        )
-      }
-
-      return (
-        <View style={{ flex: 1 }}>
-          <Text>Welcome</Text>
-        </View>
-      )
-    }
+    const { Child } = this.props
+    const { keyboardHeight } = this.state
 
     return (
-      <View style={{ flex: 1 }}>
-        <Text>Loading</Text>
+      <View style={{ transform: [{ translateY: -keyboardHeight }] }}>
+        <Child />
       </View>
     )
   }
 }
+
+export default enhancer(EnhancedAppContainer)
