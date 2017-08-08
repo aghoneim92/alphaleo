@@ -53,10 +53,11 @@ const Login = ({
         style={{ flex: 1 }}
         width={360}
         height={360}
+        resizeMode="contain"
         source={{ uri: 'logo_transparent' }}
       />
     </View>
-    <KeyboardAvoidingView behavior="padding" style={styles.actions}>
+    <View style={styles.actions}>
       <View style={{ ...styles.actions, width: '70%' }}>
         <TextInput
           placeholder="Email"
@@ -67,6 +68,7 @@ const Login = ({
           value={email}
           onChangeText={setEmail}
           autoCapitalize="none"
+          underlineColorAndroid="transparent"
           style={styles.input}
         />
         <TextInput
@@ -79,6 +81,7 @@ const Login = ({
           maxLength={50}
           returnKeyType="send"
           secureTextEntry
+          underlineColorAndroid="transparent"
           value={password}
           onChangeText={setPassword}
         />
@@ -120,7 +123,7 @@ const Login = ({
           Login with Facebook
         </Button>
       </View>
-    </KeyboardAvoidingView>
+    </View>
   </View>
 
 export default enhance(Login)

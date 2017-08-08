@@ -35,7 +35,7 @@ export class EnhancedAppContainer extends Component {
     // eslint-disable-next-line react/no-unused-prop-types
     endCoordinates: { height: number },
   }) => {
-    LayoutAnimation.easeInEaseOut()
+    // LayoutAnimation.easeInEaseOut()
     this.setState({ keyboardHeight: height })
   }
 
