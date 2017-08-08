@@ -17,7 +17,8 @@ target 'alphaleo' do
     'RCTText',
     'RCTNetwork',
     'RCTWebSocket', # needed for debugging,
-    'BatchedBridge'
+    'BatchedBridge',
+    'RCTImage'
     # Add any other subspecs you want to use in your project
   ]
   # Explicitly include Yoga if you are using RN >= 0.42.0
@@ -29,6 +30,8 @@ target 'alphaleo' do
   
   pod 'Firebase/Core'
   pod 'RNFirebase', :path => '../node_modules/react-native-firebase'
+  
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
   
   # [OPTIONAL PODS] - comment out pods for firebase products you won't be using.
 #  pod 'Firebase/AdMob'

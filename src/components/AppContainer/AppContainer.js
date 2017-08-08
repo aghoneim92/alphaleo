@@ -44,8 +44,16 @@ export class EnhancedAppContainer extends Component {
     const { keyboardHeight } = this.state
 
     return (
-      <View style={{ transform: [{ translateY: -keyboardHeight }] }}>
-        <Child />
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: '#710007',
+          transform: [{ translateY: -keyboardHeight }],
+        }}
+      >
+        <View style={{ flex: 1, backgroundColor: 'white', marginTop: 20 }}>
+          <Child />
+        </View>
       </View>
     )
   }

@@ -6,7 +6,7 @@ import { firebaseConnect } from 'react-redux-firebase'
 import { mapProps } from 'recompose'
 
 import Loading from '../Loading'
-import Login from '../Login'
+import Login from '../Login/Login'
 import Main from '../Main'
 
 type AuthType = { isLoaded: boolean, isEmpty: boolean }
