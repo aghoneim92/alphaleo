@@ -4,6 +4,10 @@ import { withHandlers } from 'recompose'
 
 // import Expo from 'expo'
 
+import * as FBSDK from 'react-native-fbsdk'
+
+const { AccessToken, LoginManager } = FBSDK
+
 export default withHandlers({
   onLoginWithEmailPress: props => async () => {
     const { email, password, setErrorText, setSigningIn } = props
@@ -22,6 +26,29 @@ export default withHandlers({
     // }
   },
   onLoginWithFacebookPress: props => async () => {
+    try {
+      const result = LoginManager.logInWithReadPermissions([
+        'public_profile',
+        'email',
+      ])
+
+      if (!result.isCanceled) {
+        const { accessToken } = await AccessToken.getCurrentAccessToken()
+
+        const fbProvider = props.firebase.auth.FacebookAuthProvider.credential(
+          accessToken,
+        )
+
+        console.log('fbProvider')
+        props.firebase.auth().signInWithCredential(fbProvider)
+
+        // alert(user)
+      } else {
+        // alert('canceled')
+      }
+    } catch (e) {
+      // alert(`error ${e}`)
+    }
     // const {
     //   token,
     // } = await Expo.Facebook.logInWithReadPermissionsAsync('614051825453607', {

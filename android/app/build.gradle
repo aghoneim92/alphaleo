@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "26.0.0"
+    buildToolsVersion "26.0.1"
     defaultConfig {
         applicationId "org.alphaleo"
         minSdkVersion 21
@@ -43,6 +43,7 @@ dependencies {
     compile(project(':react-native-firebase')) {
         transitive = false
     }
+    compile project(':react-native-fbsdk')
     compile "com.google.firebase:firebase-core:11.0.0"
 
     // If you are receiving Google Play API availability issues, add the following dependency

@@ -7,7 +7,7 @@ import { mapProps } from 'recompose'
 
 import Loading from '../Loading'
 import Login from '../Login/Login'
-import Main from '../Main'
+import Main from '../Main/Main'
 
 type AuthType = { isLoaded: boolean, isEmpty: boolean }
 
