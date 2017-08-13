@@ -14,20 +14,10 @@ export default withHandlers({
 
     setSigningIn(true)
     setErrorText(false)
-
-    // try {
-    //   await firebase.auth().signInWithEmailAndPassword(email, password)
-    // } catch (error) {
-    //   // Handle Errors here.
-    //   var errorCode = error.code
-    //   var errorMessage = error.message
-
-    //   setErrorText(errorMessage)
-    // }
   },
   onLoginWithFacebookPress: props => async () => {
     try {
-      const result = LoginManager.logInWithReadPermissions([
+      const result = await LoginManager.logInWithReadPermissions([
         'public_profile',
         'email',
       ])
@@ -39,28 +29,8 @@ export default withHandlers({
           accessToken,
         )
 
-        console.log('fbProvider')
         props.firebase.auth().signInWithCredential(fbProvider)
-
-        // alert(user)
-      } else {
-        // alert('canceled')
       }
-    } catch (e) {
-      // alert(`error ${e}`)
-    }
-    // const {
-    //   token,
-    // } = await Expo.Facebook.logInWithReadPermissionsAsync('614051825453607', {
-    //   permissions: ['email', 'public_profile'],
-    // })
-    // const credential = firebase.auth.FacebookAuthProvider.credential(token)
-    // try {
-    //   await firebase.auth().signInWithCredential(credential)
-    // } catch (error) {
-    //   let errorCode = error.code
-    //   let errorMessage = error.message
-    //   setErrorText(errorMessage)
-    // }
+    } catch (e) {}
   },
 })

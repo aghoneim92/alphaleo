@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-import { View, Text } from 'react-native'
+import Goals from '../Goals/Goals'
 
-const Main = () =>
-  <View style={{ flex: 1 }}>
-    <Text>Main</Text>
-  </View>
+export default class Main extends Component {
+  componentDidMount() {}
 
-export default Main
+  render() {
+    return <Goals />
+  }
+}

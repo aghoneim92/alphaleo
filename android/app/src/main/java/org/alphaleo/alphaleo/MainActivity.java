@@ -1,11 +1,16 @@
 package org.alphaleo.alphaleo;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import com.facebook.react.ReactActivity;
 
 import android.content.Intent;
+import android.os.PersistableBundle;
+import android.support.annotation.Nullable;
+import android.view.Window;
+import android.view.WindowManager;
 
 public class MainActivity extends ReactActivity {
 

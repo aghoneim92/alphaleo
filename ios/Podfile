@@ -19,7 +19,8 @@ target 'alphaleo' do
     'RCTWebSocket', # needed for debugging,
     'BatchedBridge',
     'RCTImage',
-    'RCTAnimation'
+    'RCTAnimation',
+    'RCTLinkingIOS'
     # Add any other subspecs you want to use in your project
   ]
   pod 'react-native-fbsdk', :path => '../node_modules/react-native-fbsdk/ios'
