@@ -29,17 +29,17 @@ export class EnhancedAppContainer extends Component {
   keyboardShowListener: { remove: Function }
   keyboardHideListener: { remove: Function }
 
-  handleKeyboardHeightChange = event => {
+  handleKeyboardHeightChange = (
+    event: ?{ endCoordinates: { height: number } },
+  ) => {
     const height = event ? event.endCoordinates.height : 0
 
     this.setState({ keyboardHeight: height })
   }
 
   render() {
-    const { Child } = this.props
+    const { Child, isEmpty } = this.props
     const { keyboardHeight } = this.state
-
-    console.log('keyboardHeight', keyboardHeight)
 
     return (
       <View style={{ flex: 1, backgroundColor: '#710007' }}>
@@ -49,9 +49,10 @@ export class EnhancedAppContainer extends Component {
             backgroundColor: '#710007',
             transform: [
               {
-                translateY:
-                  -keyboardHeight +
-                  (Platform.OS === 'android' && keyboardHeight ? 10 : 0),
+                translateY: isEmpty
+                  ? -keyboardHeight +
+                    (Platform.OS === 'android' && keyboardHeight ? 10 : 0)
+                  : 0,
               },
             ],
           }}

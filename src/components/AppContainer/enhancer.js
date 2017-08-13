@@ -34,7 +34,7 @@ export const propsMapper = ({
     Child = Main
   }
 
-  return { Child }
+  return { Child, isEmpty }
 }
 
 export default compose(
