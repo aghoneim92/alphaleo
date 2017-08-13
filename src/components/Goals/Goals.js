@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import { StyleSheet, ScrollView, View, Text } from 'react-native'
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons'
+import ProgressBarClassic from 'react-native-progress-bar-classic'
 
 import {
   Card,
@@ -18,11 +19,12 @@ import { firebaseConnect } from 'react-redux-firebase'
 import { connect } from 'react-redux'
 
 import { values } from 'ramda'
+import moment from 'moment'
 
 import NewGoal from './NewGoal'
 import Header from './Header'
 
-const Goal = ({ id, title, type, achieved, target, deadline }) =>
+const Goal = ({ id, title, type, achieved, target, deadline, firebase }) =>
   <Card>
     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
       <MaterialIcon
@@ -33,14 +35,34 @@ const Goal = ({ id, title, type, achieved, target, deadline }) =>
       />
       <CardTitle title={title} />
     </View>
-    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+    <CardContent>
       <Text>
-        {`Target: LE ${target}`}
+        {`Target: LE ${target}, Achieved: LE ${achieved}, Deadline: ${moment(
+          deadline,
+        ).format('DD-MM-YY')}`}
       </Text>
-      <Text>
-        {`Achieved: LE ${achieved}`}
-      </Text>
-    </View>
+      <View
+        style={{
+          margin: 20,
+          marginLeft: 40,
+        }}
+      >
+        <ProgressBarClassic
+          progress={target === 0 ? 0 : 100 * achieved / target}
+          valueStyle="balloon"
+        />
+      </View>
+    </CardContent>
+    <CardAction seperator inColumn={false}>
+      <CardButton onPress={() => {}} title="Done" color="blue" />
+      <CardButton
+        onPress={() => {
+          firebase.ref(`goals/${id}`).remove()
+        }}
+        title="Delete"
+        color="blue"
+      />
+    </CardAction>
   </Card>
 
 @firebaseConnect(['goals'])
@@ -53,7 +75,7 @@ class Goals extends Component {
   }
 
   render() {
-    const { goals } = this.props
+    const { firebase, goals } = this.props
 
     return (
       <View style={{ flex: 1 }}>
@@ -65,7 +87,9 @@ class Goals extends Component {
         />
         <ScrollView style={{ flex: 1 }}>
           {goals
-            ? values(goals).map(goal => <Goal key={goal.id} {...goal} />)
+            ? values(goals).map(goal =>
+                <Goal key={goal.id} firebase={firebase} {...goal} />,
+              )
             : null}
         </ScrollView>
       </View>

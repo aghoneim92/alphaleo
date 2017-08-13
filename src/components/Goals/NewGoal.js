@@ -23,8 +23,8 @@ export default class NewGoal extends Component {
 
   state = {
     goalType: 'financial',
-    target: 'LE 0.00',
-    achieved: 'LE 0.00',
+    target: 0,
+    achieved: 0,
     deadline: new Date(),
     title: '',
   }
@@ -41,11 +41,11 @@ export default class NewGoal extends Component {
     this.setState({ goalType: 'task' })
   }
 
-  handleTargetChange = (target: string) => {
+  handleTargetChange = (target: number) => {
     this.setState({ target })
   }
 
-  handleAchievedChange = (achieved: string) => {
+  handleAchievedChange = (achieved: number) => {
     this.setState({ achieved })
   }
 
@@ -58,8 +58,8 @@ export default class NewGoal extends Component {
       .push('/goals', {
         type: this.state.goalType,
         title: this.state.title,
-        target: parseFloat(this.state.target.replace('LE ', '')),
-        achieved: parseFloat(this.state.target.replace('LE ', '')),
+        target: this.state.target,
+        achieved: this.state.achieved,
         deadline: this.state.deadline.getTime(),
       })
       .then(ref =>
