@@ -29,7 +29,7 @@ const styles = {
   },
 }
 
-const GoalType = ({ goalType, onFinancialPress, onTaskPress }) =>
+const GoalType = ({ type, onFinancialPress, onTaskPress }) =>
   <View style={styles.goalTypeWrapper}>
     <View style={styles.goalTypeTextWrapper}>
       <Text style={styles.goalTypeText}>Goal Type</Text>
@@ -39,18 +39,16 @@ const GoalType = ({ goalType, onFinancialPress, onTaskPress }) =>
         <MaterialIcon.Button
           borderRadius={0}
           onPress={onFinancialPress}
-          backgroundColor={
-            goalType === 'financial' ? COLOR_PRIMARY : 'transparent'
-          }
+          backgroundColor={type === 'financial' ? COLOR_PRIMARY : 'transparent'}
           iconStyle={{
-            color: goalType === 'financial' ? 'white' : 'black',
+            color: type === 'financial' ? 'white' : 'black',
           }}
           name="attach-money"
         >
           <Text
             style={{
               fontSize: 15,
-              color: goalType === 'financial' ? 'white' : 'black',
+              color: type === 'financial' ? 'white' : 'black',
             }}
           >
             Financial
@@ -61,14 +59,14 @@ const GoalType = ({ goalType, onFinancialPress, onTaskPress }) =>
         <FontAwesome.Button
           borderRadius={0}
           onPress={onTaskPress}
-          backgroundColor={goalType === 'task' ? COLOR_PRIMARY : 'transparent'}
-          iconStyle={{ color: goalType === 'task' ? 'white' : 'black' }}
+          backgroundColor={type === 'task' ? COLOR_PRIMARY : 'transparent'}
+          iconStyle={{ color: type === 'task' ? 'white' : 'black' }}
           name="tasks"
         >
           <Text
             style={{
               fontSize: 15,
-              color: goalType === 'task' ? 'white' : 'black',
+              color: type === 'task' ? 'white' : 'black',
             }}
           >
             Task

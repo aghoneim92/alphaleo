@@ -21,11 +21,21 @@ export default class NewGoal extends Component {
     title: 'New Project',
   }
 
+  constructor(props, context) {
+    super(props, context)
+
+    const { navigation: { state: { params } } } = props
+
+    if (params && params.goal) {
+      this.state = params.goal
+    }
+  }
+
   state = {
-    goalType: 'financial',
+    type: 'financial',
     target: 0,
     achieved: 0,
-    deadline: new Date(),
+    deadline: moment().format('DD-MM-YYYY'),
     title: '',
   }
 
@@ -34,11 +44,11 @@ export default class NewGoal extends Component {
   }
 
   handleFinancialPress = () => {
-    this.setState({ goalType: 'financial' })
+    this.setState({ type: 'financial' })
   }
 
   handleTaskPress = () => {
-    this.setState({ goalType: 'task' })
+    this.setState({ type: 'task' })
   }
 
   handleTargetChange = (target: number) => {
@@ -54,32 +64,55 @@ export default class NewGoal extends Component {
   }
 
   handleSavePress = () => {
-    this.props.firebase
-      .push('/goals', {
-        type: this.state.goalType,
-        title: this.state.title,
-        target: this.state.target,
-        achieved: this.state.achieved,
-        deadline: this.state.deadline.getTime(),
-      })
-      .then(ref =>
-        this.props.firebase.update(`/goals/${ref.key}`, { id: ref.key }),
-      )
-      .then(() => this.props.navigation.goBack())
+    const {
+      state: { type, title, target, achieved, deadline },
+      props: { firebase, navigation: { state: { params } } },
+    } = this
+
+    const values = {
+      type,
+      title,
+      target,
+      achieved,
+      deadline: moment(deadline, 'DD-MM-YYYY').valueOf(),
+    }
+
+    let prom
+
+    if (params && params.goal) {
+      prom = firebase.update(`/goals/${params.goal.id}`, values)
+    } else {
+      prom = firebase
+        .push('/goals', values)
+        .then(ref =>
+          this.props.firebase.update(`/goals/${ref.key}`, { id: ref.key }),
+        )
+    }
+
+    prom.then(() => this.props.navigation.goBack())
   }
 
   handleGoalTitleChange = (title: string) => {
     this.setState({ title })
   }
 
+  navigation: any
+
   render() {
-    const { title, deadline, target, achieved, goalType } = this.state
+    const {
+      props: { navigation: { state: navigationState } },
+      state: { title, deadline, target, achieved, type },
+    } = this
 
     return (
       <ScrollView style={{ flex: 1 }}>
         <Header
           leftIcon="chevron-left"
-          title="New Goal"
+          title={
+            navigationState.params && navigationState.params.goal
+              ? 'Update Goal'
+              : 'New Goal'
+          }
           onLeftIconPress={this.handleBackPress}
         />
         <TextInput
@@ -96,12 +129,12 @@ export default class NewGoal extends Component {
           onChangeText={this.handleGoalTitleChange}
         />
         <GoalType
-          goalType={goalType}
+          type={type}
           onFinancialPress={this.handleFinancialPress}
           onTaskPress={this.handleTaskPress}
         />
         <GoalProperties
-          goalType={goalType}
+          type={type}
           target={target}
           achieved={achieved}
           deadline={deadline}

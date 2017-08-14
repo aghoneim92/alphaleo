@@ -111,10 +111,10 @@ class FinancialProperties extends Component {
           <DatePicker
             style={{ flex: 1 }}
             date={deadline}
-            mode="time"
+            mode="date"
             placeholder="select date"
             format="DD-MM-YYYY"
-            minDate={new Date()}
+            minDate={moment().format('DD-MM-YY')}
             confirmBtnText="Confirm"
             cancelBtnText="Cancel"
             customStyles={{
@@ -138,8 +138,8 @@ class FinancialProperties extends Component {
     )
   }
 }
-const GoalProperties = ({ goalType, ...props }) =>
-  goalType === 'financial'
+const GoalProperties = ({ type, ...props }) =>
+  type === 'financial'
     ? <FinancialProperties {...props} />
     : <View {...props} />
 
