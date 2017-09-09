@@ -1,22 +1,21 @@
 // @flow
-import React, { Component } from 'react'
-
-import { View, Text, TextInput, ScrollView } from 'react-native'
-
+import React, { PureComponent } from 'react'
+import { View, TextInput, ScrollView } from 'react-native'
 import Button from 'apsl-react-native-button'
+
+import type { Navigation } from 'react-navigation'
 
 import { firebaseConnect } from 'react-redux-firebase'
 
-import moment from 'moment'
+import { Map, List } from 'immutable'
 
 import Header from './Header'
-import GoalType from './GoalType'
-import GoalProperties from './GoalProperties'
+import ProjectProperties from './ProjectProperties'
 
 import { COLOR_PRIMARY } from '../../constants'
 
 @firebaseConnect()
-export default class NewGoal extends Component {
+export default class ProjectEditor extends PureComponent {
   static navigationOptions = {
     title: 'New Project',
   }
@@ -26,16 +25,18 @@ export default class NewGoal extends Component {
 
     const { navigation: { state: { params } } } = props
 
-    if (params && params.goal) {
-      this.state = params.goal
+    if (params && params.project) {
+      this.state = params.project
     }
   }
 
   state = {
-    type: 'financial',
-    target: 0,
-    achieved: 0,
-    deadline: moment().format('DD-MM-YYYY'),
+    financials: Map({
+      target: 0,
+      achieved: 0,
+      deadline: Date.now(),
+    }),
+    tasks: List(),
     title: '',
   }
 
@@ -43,65 +44,51 @@ export default class NewGoal extends Component {
     this.props.navigation.goBack()
   }
 
-  handleFinancialPress = () => {
-    this.setState({ type: 'financial' })
+  handleFinancialsChange = (financials: Map) => {
+    this.setState({ financials })
   }
 
-  handleTaskPress = () => {
-    this.setState({ type: 'task' })
-  }
-
-  handleTargetChange = (target: number) => {
-    this.setState({ target })
-  }
-
-  handleAchievedChange = (achieved: number) => {
-    this.setState({ achieved })
-  }
-
-  handleDateChange = (deadline: Date) => {
-    this.setState({ deadline })
+  handleTasksChange = (tasks: List) => {
+    this.setState({ tasks })
   }
 
   handleSavePress = () => {
     const {
-      state: { type, title, target, achieved, deadline },
-      props: { firebase, navigation: { state: { params } } },
+      state: { id, title, financials, tasks },
+      props: { firebase },
     } = this
 
-    const values = {
-      type,
-      title,
-      target,
-      achieved,
-      deadline: moment(deadline, 'DD-MM-YYYY').valueOf(),
-    }
+    const values = { title, financials: financials.toJS(), tasks: tasks.toJS() }
 
     let prom
 
-    if (params && params.goal) {
-      prom = firebase.update(`/goals/${params.goal.id}`, values)
+    if (id) {
+      prom = firebase.update(`/projects/${id}`, values)
     } else {
       prom = firebase
-        .push('/goals', values)
+        .push('/projects', values)
         .then(ref =>
-          this.props.firebase.update(`/goals/${ref.key}`, { id: ref.key }),
+          this.props.firebase.update(`/projects/${ref.key}`, { id: ref.key }),
         )
     }
 
-    prom.then(() => this.props.navigation.goBack())
+    prom.then(() => {
+      this.props.navigation.goBack()
+    })
   }
 
   handleGoalTitleChange = (title: string) => {
     this.setState({ title })
   }
 
-  navigation: any
+  navigation: Navigation
 
   render() {
     const {
       props: { navigation: { state: navigationState } },
-      state: { title, deadline, target, achieved, type },
+      state: { title, financials, tasks },
+      handleFinancialsChange,
+      handleTasksChange,
     } = this
 
     return (
@@ -110,8 +97,8 @@ export default class NewGoal extends Component {
           leftIcon="chevron-left"
           title={
             navigationState.params && navigationState.params.goal
-              ? 'Update Goal'
-              : 'New Goal'
+              ? 'Update Project'
+              : 'New Project'
           }
           onLeftIconPress={this.handleBackPress}
         />
@@ -125,22 +112,14 @@ export default class NewGoal extends Component {
           autoFocus
           value={title}
           underlineColorAndroid="transparent"
-          placeholder="Goal Name"
+          placeholder="Project Name"
           onChangeText={this.handleGoalTitleChange}
         />
-        <GoalType
-          type={type}
-          onFinancialPress={this.handleFinancialPress}
-          onTaskPress={this.handleTaskPress}
-        />
-        <GoalProperties
-          type={type}
-          target={target}
-          achieved={achieved}
-          deadline={deadline}
-          onTargetChange={this.handleTargetChange}
-          onAchievedChange={this.handleAchievedChange}
-          onDateChange={this.handleDateChange}
+        <ProjectProperties
+          financials={financials}
+          tasks={tasks}
+          onFinancialsChange={handleFinancialsChange}
+          onTasksChange={handleTasksChange}
         />
         <View
           style={{
@@ -157,6 +136,7 @@ export default class NewGoal extends Component {
               height: 35,
               marginRight: 15,
               borderColor: 'transparent',
+              marginTop: 20,
             }}
             textStyle={{ color: 'white', fontSize: 15 }}
             onPress={this.handleSavePress}

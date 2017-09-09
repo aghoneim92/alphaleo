@@ -1,137 +1,49 @@
 // @flow
 import React, { Component } from 'react'
-import {
-  TouchableOpacity,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-} from 'react-native'
-import MaterialIcon from 'react-native-vector-icons/MaterialIcons'
-import ProgressBarClassic from 'react-native-progress-bar-classic'
-
-import {
-  Card,
-  CardTitle,
-  CardContent,
-  CardAction,
-  CardButton,
-  CardImage,
-} from 'react-native-material-cards'
+import { View, ScrollView } from 'react-native'
 
 import { StackNavigator } from 'react-navigation'
 
 import { firebaseConnect } from 'react-redux-firebase'
 import { connect } from 'react-redux'
 
-import { values } from 'ramda'
-import moment from 'moment'
+import { toPairs } from 'ramda'
 
-import NewGoal from './NewGoal'
+import ProjectCard from './ProjectCard'
+import ProjectEditor from './ProjectEditor'
 import Header from './Header'
 
-const Goal = goal => {
-  const {
-    id,
-    title,
-    type,
-    achieved,
-    target,
-    deadline,
-    firebase,
-    navigation,
-  } = goal
-
-  const formattedDeadline = moment(deadline).format('DD-MM-YY')
-
-  return (
-    <TouchableOpacity
-      onPress={() =>
-        navigation.navigate('NewGoal', {
-          goal: {
-            id,
-            title,
-            type,
-            achieved,
-            target,
-            deadline: formattedDeadline,
-          },
-        })}
-    >
-      <Card>
-        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-          <MaterialIcon
-            backgroundColor="transparent"
-            size={40}
-            iconStyle={{ color: 'black' }}
-            name="attach-money"
-          />
-          <CardTitle title={title} />
-        </View>
-        <CardContent>
-          <Text>
-            {`Target: LE ${target}, Achieved: LE ${achieved}, Deadline: ${formattedDeadline}`}
-          </Text>
-          <View
-            style={{
-              margin: 20,
-              marginLeft: 40,
-            }}
-          >
-            <ProgressBarClassic
-              progress={target === 0 ? 0 : 100 * achieved / target}
-              valueStyle="balloon"
-            />
-          </View>
-        </CardContent>
-        <CardAction seperator inColumn={false}>
-          <CardButton
-            onPress={() => {
-              firebase.ref(`goals/${id}`).remove()
-            }}
-            title="Delete"
-            color="blue"
-          />
-        </CardAction>
-      </Card>
-    </TouchableOpacity>
-  )
-}
-
-@firebaseConnect(['goals'])
-@connect(({ firebase: { data: { goals } } }) => ({
-  goals,
+@firebaseConnect(['projects'])
+@connect(({ firebase: { data: { projects } } }) => ({
+  projects,
 }))
-class Goals extends Component {
+class Projects extends Component {
   handleAddPress = () => {
-    this.props.navigation.navigate('NewGoal')
+    this.props.navigation.navigate('ProjectEditor')
   }
 
   render() {
-    const { firebase, navigation, goals } = this.props
+    const { firebase, navigation, projects = {} } = this.props
+
+    const projectComponents = toPairs(projects).map(([key, project]) =>
+      <ProjectCard
+        key={key}
+        project={{ id: key, ...project }}
+        firebase={firebase}
+        navigation={navigation}
+      />,
+    )
 
     return (
       <View style={{ flex: 1 }}>
         <Header
           leftIcon="bars"
           rightIcon="plus"
-          title="Goals"
+          title="Projects"
           onRightIconPress={this.handleAddPress}
         />
         <ScrollView style={{ flex: 1 }}>
-          {goals
-            ? values(goals).map(
-                goal =>
-                  goal.id
-                    ? <Goal
-                        key={goal.id}
-                        firebase={firebase}
-                        {...goal}
-                        navigation={navigation}
-                      />
-                    : null,
-              )
-            : null}
+          {projectComponents}
         </ScrollView>
       </View>
     )
@@ -140,11 +52,11 @@ class Goals extends Component {
 
 export default StackNavigator(
   {
-    Goals: {
-      screen: Goals,
+    Projects: {
+      screen: Projects,
     },
-    NewGoal: {
-      screen: NewGoal,
+    ProjectEditor: {
+      screen: ProjectEditor,
     },
   },
   {

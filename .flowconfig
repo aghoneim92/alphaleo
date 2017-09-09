@@ -8,3 +8,5 @@
 sketchy-null=error
 [options]
 esproposal.decorators=ignore
+[ignore]
+*/node_modules/react-native/*

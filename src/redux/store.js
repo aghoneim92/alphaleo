@@ -1,10 +1,9 @@
 import RNFirebase from 'react-native-firebase'
-import initialState from './initialState'
 
-import { combineReducers } from 'redux'
+import { createStore, combineReducers } from 'redux'
 import { reactReduxFirebase, firebaseStateReducer } from 'react-redux-firebase'
 
-import { createStore, compose } from 'redux'
+import initialState from './initialState'
 
 const configurationOptions = {
   debug: true,

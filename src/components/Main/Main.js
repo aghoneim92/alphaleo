@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 
-import Goals from '../Goals/Goals'
+import Projects from '../Projects/Projects'
 
 export default class Main extends Component {
   componentDidMount() {}
 
   render() {
-    return <Goals />
+    return <Projects />
   }
 }
