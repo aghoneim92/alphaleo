@@ -22,7 +22,7 @@ import AppContainer from './AppContainer/AppContainer'
 
 const App = () =>
   <View style={{ flex: 1 }}>
-    <StatusBar backgroundColor={COLOR_PRIMARY_DARK} />
+    {/* <StatusBar backgroundColor={COLOR_PRIMARY_DARK} /> */}
     <Provider store={store}>
       <AppContainer />
     </Provider>

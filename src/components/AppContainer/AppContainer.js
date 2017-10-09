@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import { Platform, View, LayoutAnimation, Keyboard } from 'react-native'
 
 import enhancer from './enhancer'
+import { COLOR_PRIMARY } from '../../constants'
 
 export class EnhancedAppContainer extends Component {
   state = {
@@ -42,11 +43,11 @@ export class EnhancedAppContainer extends Component {
     const { keyboardHeight } = this.state
 
     return (
-      <View style={{ flex: 1, backgroundColor: '#710007' }}>
+      <View style={{ flex: 1, backgroundColor: COLOR_PRIMARY }}>
         <View
           style={{
             flex: 1,
-            backgroundColor: '#710007',
+            backgroundColor: COLOR_PRIMARY,
             transform: [
               {
                 translateY: isEmpty
