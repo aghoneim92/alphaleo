@@ -9,12 +9,15 @@
 
 #import "AppDelegate.h"
 
-#import <Firebase.h>
-
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import "RootViewController.h"
+
+@import Firebase;
+
+#import "RNFirebaseMessaging.h"
 
 @implementation AppDelegate
 
@@ -24,8 +27,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
+    [FIRApp configure];
+    [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];
     
+#if (DEBUG)
+    NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
+#else
+    NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+#endif
     RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                         moduleName:@"alphaleo"
                                                  initialProperties:nil
@@ -33,16 +42,12 @@
     rootView.backgroundColor = [[UIColor alloc] initWithRed:136.0f green:23.0f blue:28.0f alpha:1];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    UIViewController *rootViewController = [UIViewController new];
+    UIViewController *rootViewController = [RootViewController new];
     
     rootViewController.view = rootView;
     self.window.rootViewController = rootViewController;
     [self.window makeKeyAndVisible];
-    
-    [FIRApp configure];
-    
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    
+
     return YES;
 }
 
@@ -54,6 +59,31 @@
                                                           openURL:url
                                                 sourceApplication:sourceApplication
                                                        annotation:annotation];
+}
+
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    [RNFirebaseMessaging didReceiveLocalNotification:notification];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo {
+    [RNFirebaseMessaging didReceiveRemoteNotification:userInfo];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo
+fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler{
+    [RNFirebaseMessaging didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler];
+}
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+       willPresentNotification:(UNNotification *)notification
+         withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
+    [RNFirebaseMessaging willPresentNotification:notification withCompletionHandler:completionHandler];
+}
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+didReceiveNotificationResponse:(UNNotificationResponse *)response
+         withCompletionHandler:(void (^)())completionHandler {
+    [RNFirebaseMessaging didReceiveNotificationResponse:response withCompletionHandler:completionHandler];
 }
 
 

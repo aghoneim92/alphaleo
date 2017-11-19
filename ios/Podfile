@@ -31,13 +31,13 @@ target 'alphaleo' do
   pod 'Folly', :podspec => react_native_path + '/third-party-podspecs/Folly.podspec'
   pod 'GLog', :podspec => react_native_path + '/third-party-podspecs/GLog.podspec'
   
-  pod 'Firebase/Core'
-  pod 'RNFirebase', :path => '../node_modules/react-native-firebase'
-  
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
   
   pod 'lottie-ios', :path => '../node_modules/lottie-ios'
   pod 'lottie-react-native', :path => '../node_modules/lottie-react-native'
+  
+  pod 'Firebase/Core'
+  pod 'RNFirebase', :path => '../node_modules/react-native-firebase'
   
   # [OPTIONAL PODS] - comment out pods for firebase products you won't be using.
 #  pod 'Firebase/AdMob'

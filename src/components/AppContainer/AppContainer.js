@@ -1,10 +1,9 @@
 // @flow
 import React, { Component } from 'react'
-
-import { Platform, View, LayoutAnimation, Keyboard } from 'react-native'
+import { Platform, View, Keyboard } from 'react-native'
 
 import enhancer from './enhancer'
-import { COLOR_PRIMARY } from '../../constants'
+import { COLOR_PRIMARY_DARK } from '../../constants'
 
 export class EnhancedAppContainer extends Component {
   state = {
@@ -33,6 +32,7 @@ export class EnhancedAppContainer extends Component {
   handleKeyboardHeightChange = (
     event: ?{ endCoordinates: { height: number } },
   ) => {
+    console.log(event)
     const height = event ? event.endCoordinates.height : 0
 
     this.setState({ keyboardHeight: height })
@@ -43,11 +43,11 @@ export class EnhancedAppContainer extends Component {
     const { keyboardHeight } = this.state
 
     return (
-      <View style={{ flex: 1, backgroundColor: COLOR_PRIMARY }}>
+      <View style={{ flex: 1, backgroundColor: COLOR_PRIMARY_DARK }}>
         <View
           style={{
             flex: 1,
-            backgroundColor: COLOR_PRIMARY,
+            backgroundColor: COLOR_PRIMARY_DARK,
             transform: [
               {
                 translateY: isEmpty

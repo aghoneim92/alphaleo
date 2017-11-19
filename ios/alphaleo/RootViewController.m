@@ -6,4 +6,12 @@
 //  Copyright © 2017 Alpha Leo Club of Alexandria. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "RootViewController.h"
+
+@implementation RootViewController
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
+@end

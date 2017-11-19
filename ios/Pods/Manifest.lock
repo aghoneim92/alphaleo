@@ -21,42 +21,41 @@ PODS:
   - boost/shared_ptr-includes (1.59.0)
   - boost/string_algorithms-includes (1.59.0)
   - DoubleConversion (1.1.5)
-  - FBSDKCoreKit (4.27.0):
+  - FBSDKCoreKit (4.28.0):
     - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.27.0):
+  - FBSDKLoginKit (4.28.0):
     - FBSDKCoreKit
-  - FBSDKShareKit (4.27.0):
+  - FBSDKShareKit (4.28.0):
     - FBSDKCoreKit
-  - Firebase/Auth (4.3.0):
+  - Firebase/Auth (4.6.0):
     - Firebase/Core
-    - FirebaseAuth (= 4.2.1)
-  - Firebase/Core (4.3.0):
-    - FirebaseAnalytics (= 4.0.4)
-    - FirebaseCore (= 4.0.8)
-  - Firebase/Database (4.3.0):
+    - FirebaseAuth (= 4.3.2)
+  - Firebase/Core (4.6.0):
+    - FirebaseAnalytics (= 4.0.5)
+    - FirebaseCore (= 4.0.11)
+  - Firebase/Database (4.6.0):
     - Firebase/Core
-    - FirebaseDatabase (= 4.1.0)
-  - Firebase/Messaging (4.3.0):
+    - FirebaseDatabase (= 4.1.1)
+  - Firebase/Messaging (4.6.0):
     - Firebase/Core
-    - FirebaseMessaging (= 2.0.4)
-  - FirebaseAnalytics (4.0.4):
+    - FirebaseMessaging (= 2.0.6)
+  - FirebaseAnalytics (4.0.5):
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
     - nanopb (~> 0.3)
-  - FirebaseAuth (4.2.1):
+  - FirebaseAuth (4.3.2):
     - FirebaseAnalytics (~> 4.0)
     - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
     - GTMSessionFetcher/Core (~> 1.1)
-  - FirebaseCore (4.0.8):
+  - FirebaseCore (4.0.11):
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-    - nanopb (~> 0.3)
-  - FirebaseDatabase (4.1.0):
+  - FirebaseDatabase (4.1.1):
     - FirebaseAnalytics (~> 4.0)
     - FirebaseCore (~> 4.0)
     - leveldb-library (~> 1.18)
-  - FirebaseInstanceID (2.0.4)
-  - FirebaseMessaging (2.0.4):
+  - FirebaseInstanceID (2.0.6)
+  - FirebaseMessaging (2.0.6):
     - FirebaseAnalytics (~> 4.0)
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
@@ -80,7 +79,7 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
   - GTMSessionFetcher/Core (1.1.12)
-  - leveldb-library (1.18.3)
+  - leveldb-library (1.20)
   - lottie-ios (2.1.3)
   - lottie-react-native (2.2.7):
     - lottie-ios
@@ -90,21 +89,21 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
-  - Protobuf (3.4.0)
+  - Protobuf (3.5.0)
   - React (0.49.2):
     - React/Core (= 0.49.2)
-  - react-native-fbsdk (0.6.1):
+  - react-native-fbsdk (0.6.3):
     - React
-    - react-native-fbsdk/Core (= 0.6.1)
-    - react-native-fbsdk/Login (= 0.6.1)
-    - react-native-fbsdk/Share (= 0.6.1)
-  - react-native-fbsdk/Core (0.6.1):
+    - react-native-fbsdk/Core (= 0.6.3)
+    - react-native-fbsdk/Login (= 0.6.3)
+    - react-native-fbsdk/Share (= 0.6.3)
+  - react-native-fbsdk/Core (0.6.3):
     - FBSDKCoreKit
     - React
-  - react-native-fbsdk/Login (0.6.1):
+  - react-native-fbsdk/Login (0.6.3):
     - FBSDKLoginKit
     - React
-  - react-native-fbsdk/Share (0.6.1):
+  - react-native-fbsdk/Share (0.6.3):
     - FBSDKShareKit
     - React
   - React/BatchedBridge (0.49.2):
@@ -146,7 +145,7 @@ PODS:
     - React/Core
     - React/fishhook
     - React/RCTBlob
-  - RNFirebase (3.0.2):
+  - RNFirebase (3.1.0):
     - React
   - RNVectorIcons (4.4.2):
     - React
@@ -203,31 +202,31 @@ SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   boost: 30a15ffb6d9aa4646dd3caffc960753f4cb4ca4e
   DoubleConversion: ebb6747c5b66026ad4f97b789c3ceac6f18e57a6
-  FBSDKCoreKit: ebc6c5f5b3f0e72396041050e2266781a38ac587
-  FBSDKLoginKit: 887be4b7452e1c5a3cc4485ce152529965a0c41e
-  FBSDKShareKit: 4f83956d4ca2960730fe7588a168eb8d535c06dc
-  Firebase: 83283761a1ef6dc9846e03d08059f51421afbd65
-  FirebaseAnalytics: 722b53c7b32bfc7806b06e0093a2f5180d4f2c5a
-  FirebaseAuth: d7f047fbeab98062b98ea933b8d934e0fb1190e2
-  FirebaseCore: 69b1a5ac5f857ba6d5fd9d5fe794f4786dd5e579
-  FirebaseDatabase: 607284a103e961d7f5863ee603cab5e85f443bd6
-  FirebaseInstanceID: 70c2b877e9338971b2429ea5a4293df6961aa44e
-  FirebaseMessaging: 3dd86bfda2acb680b05c97f3f8ac566e9bb87b2a
+  FBSDKCoreKit: ca961e279113f691fd83dc634c0bbad9d4e3f370
+  FBSDKLoginKit: b077381c27d800f21661757e8140cf2c80a91e4a
+  FBSDKShareKit: 4f525556e0df4cf0f574cb3f01c675434f29d477
+  Firebase: 27321a925aa85520618255a7c630859e0502ccbd
+  FirebaseAnalytics: 5b02a63ead2c3f0259cfc7f15e053e440587ecf8
+  FirebaseAuth: e58563adb207a43910a2ed87fecb9fa7d556df5a
+  FirebaseCore: 2a946ece8fbe3ce1fdeeb55324f273caade22df9
+  FirebaseDatabase: 2e6e8e110b93b9a6e7aac71774c769a363035cb1
+  FirebaseInstanceID: 24958382a1011bba5aaff37e334e7a650b9118f5
+  FirebaseMessaging: 75d83375b0f7a9911568d7bdd1a1a8261cbcbdef
   Folly: b7255b29f1d693c375d642d0f04f0592181156d9
   GLog: 3e4e4ae9746ce6bf6e9420c7fc1e08ad59c8ba1a
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
-  leveldb-library: 10fb39c39e243db4af1828441162405bbcec1404
+  leveldb-library: 4f9eedf84ab46b4fa3b7893bf30714b2a1a74022
   lottie-ios: 8c150606598931621e927377f1426d2d3e99282d
   lottie-react-native: 7473cccb5efa322498c850bffc60acc9dc0c5846
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
-  Protobuf: 03eef2ee0b674770735cf79d9c4d3659cf6908e8
+  Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
   React: 121d29261c36461e7ee5f62e44ae3826158690c2
-  react-native-fbsdk: 1f935b79f588e54c6b95805bf7117227b2f09322
-  RNFirebase: adaa43fe2a2e4722145191206fb36a86e8fd1379
+  react-native-fbsdk: 6287fcddc3162c6e458e0e8a633188e5b51b4ebd
+  RNFirebase: a76befd482c5e84df7f69893358abda498ee9f76
   RNVectorIcons: c1821d56c775cc5a3bca66c77dfc8cb4a90d27e2
   yoga: 6b4dfb791cd4a7061aac69f9e9c085766778fb6e
 
-PODFILE CHECKSUM: cae0d4a8ef7a59770c6e42fa874cab282dbc8bd1
+PODFILE CHECKSUM: 750d373def9cdbc7ae48ef2205f8a4c7e1700e5c
 
 COCOAPODS: 1.3.1

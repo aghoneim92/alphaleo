@@ -6,7 +6,11 @@
     "prettier/react"
   ],
   "parser": "babel-eslint",
-  "plugins": ["jest", "prettier", "flowtype"],
+  "plugins": [
+    "jest",
+    "prettier",
+    "flowtype"
+  ],
   "rules": {
     "react/jsx-filename-extension": 0,
     "prettier/prettier": [

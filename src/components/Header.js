@@ -35,16 +35,17 @@ const styles = StyleSheet.create({
   },
 })
 
+// TODO: choose pressDown color other than black
 const Header = ({
   title,
   leftIcon,
   rightIcon,
   onLeftIconPress,
   onRightIconPress,
-}) =>
+}) => (
   <View style={styles.header}>
     <View style={styles.leftIconWrapper}>
-      {leftIcon &&
+      {leftIcon && (
         <Icon.Button
           onPress={onLeftIconPress}
           iconStyle={styles.leftIconStyle}
@@ -52,22 +53,23 @@ const Header = ({
           name={leftIcon}
           size={24}
           color="white"
-        />}
+        />
+      )}
     </View>
     <View style={styles.textWrapper}>
-      <Text style={styles.text}>
-        {title}
-      </Text>
+      <Text style={styles.text}>{title}</Text>
     </View>
     <View style={styles.rightIconWrapper}>
-      {rightIcon &&
+      {rightIcon && (
         <Icon.Button
           onPress={onRightIconPress}
           backgroundColor="transparent"
           size={16}
           name={rightIcon}
-        />}
+        />
+      )}
     </View>
   </View>
+)
 
 export default Header

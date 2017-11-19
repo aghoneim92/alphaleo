@@ -14,6 +14,15 @@ export default withHandlers({
 
     setSigningIn(true)
     setErrorText(false)
+
+    try {
+      await props.firebase.auth().signInWithEmailAndPassword(email, password)
+    } catch (e) {
+      // TODO: clear error messages
+      setErrorText(e.toString())
+    } finally {
+      setSigningIn(false)
+    }
   },
   onLoginWithFacebookPress: props => async () => {
     try {

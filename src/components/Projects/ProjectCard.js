@@ -21,7 +21,7 @@ const ProjectCard = ({
   project: { id, title, financials: { achieved, target, deadline }, tasks },
   firebase,
   navigation,
-}) =>
+}) => (
   <TouchableOpacity
     onPress={() =>
       navigation.navigate('ProjectEditor', {
@@ -103,5 +103,6 @@ const ProjectCard = ({
       </CardAction>
     </Card>
   </TouchableOpacity>
+)
 
 export default ProjectCard

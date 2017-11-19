@@ -2,7 +2,7 @@ import React from 'react'
 
 import {
   Image,
-  KeyboardAvoidingView,
+  // KeyboardAvoidingView,
   Text,
   TextInput,
   View,
@@ -38,6 +38,8 @@ const styles = {
   },
 }
 
+// TODO: match status bar color, keyboard shit, etc
+// TODO: validate inputs
 const Login = ({
   email,
   setEmail,
@@ -46,7 +48,8 @@ const Login = ({
   onLoginWithEmailPress,
   onLoginWithFacebookPress,
   signingIn,
-}) =>
+  errorText,
+}) => (
   <View style={styles.login}>
     <View style={{ flex: 1 }}>
       <Image
@@ -103,6 +106,7 @@ const Login = ({
             Login
           </Button>
         </View>
+        <Text style={{ color: 'white' }}>{errorText}</Text>
         <Text style={{ fontSize: 16, color: 'white' }}>- or -</Text>
         <Button
           onPress={onLoginWithFacebookPress}
@@ -118,12 +122,13 @@ const Login = ({
             name="facebook-official"
             size={32}
             color="white"
-            style={{ marginLeft: 50 }}
+            style={{ marginLeft: 20 }}
           />
           Login with Facebook
         </Button>
       </View>
     </View>
   </View>
+)
 
 export default enhance(Login)

@@ -31,7 +31,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     compile "com.android.support:appcompat-v7:23.0.1"
-    compile 'com.facebook.react:react-native:0.47.1'
+    compile 'com.facebook.react:react-native:0.49.2'
 
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -44,24 +44,16 @@ dependencies {
         transitive = false
     }
     compile project(':react-native-fbsdk')
-    compile "com.google.firebase:firebase-core:11.0.0"
 
-    // If you are receiving Google Play API availability issues, add the following dependency
-    compile "com.google.android.gms:play-services-base:11.0.0"
+    def firebaseVersion = '11.4.2'
+    compile "com.google.firebase:firebase-core:$firebaseVersion"
+    compile "com.google.android.gms:play-services-base:$firebaseVersion"
 
-    // RNFirebase optional dependencies
-//    compile "com.google.firebase:firebase-ads:11.0.0"
-//    compile "com.google.firebase:firebase-analytics:11.0.0"
-    compile "com.google.firebase:firebase-auth:11.0.0"
-//    compile "com.google.firebase:firebase-config:11.0.0"
-//    compile "com.google.firebase:firebase-crash:11.0.0"
-    compile "com.google.firebase:firebase-database:11.0.0"
-    compile "com.google.firebase:firebase-messaging:11.0.0"
-//    compile "com.google.firebase:firebase-perf:11.0.0"
-    compile "com.google.firebase:firebase-storage:11.0.0"
+    compile "com.google.firebase:firebase-auth:$firebaseVersion"
+    compile "com.google.firebase:firebase-database:$firebaseVersion"
+    compile "com.google.firebase:firebase-messaging:$firebaseVersion"
 
     testCompile 'junit:junit:4.12'
 }
 
 apply plugin: 'com.google.gms.google-services'
-
