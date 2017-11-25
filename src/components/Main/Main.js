@@ -1,11 +1,13 @@
 // @flow
 
 import React, { Component } from 'react'
-import { View, Button, Platform } from 'react-native'
+import { View, Button, Platform, StyleSheet } from 'react-native'
 import { getFirebase } from 'react-redux-firebase'
 import type Firebase from 'react-native-firebase'
 
 import { DrawerNavigator, DrawerItems } from 'react-navigation'
+
+import { COLOR_PRIMARY } from '../../constants'
 
 import Messages from '../Messages/Messages'
 
@@ -63,12 +65,24 @@ const Navigator = DrawerNavigator(
   },
 )
 
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: COLOR_PRIMARY,
+  },
+})
+
 export default class Main extends Component {
   componentDidMount() {
     registerNotifications()
   }
 
   render() {
-    return <Navigator />
+    return (
+      <View style={styles.container}>
+        <View style={{ paddingTop: Platform.OS === 'ios' ? 20 : 0 }}>
+          <Navigator />
+        </View>
+      </View>
+    )
   }
 }

@@ -1,17 +1,17 @@
 import React, { PureComponent } from 'react'
 
 import {
-  Image,
   KeyboardAvoidingView,
   Text,
   TextInput,
   View,
+  Platform,
 } from 'react-native'
 
 import Icon from 'react-native-vector-icons/FontAwesome'
-
 import Button from 'apsl-react-native-button'
 
+import Logo from '../Logo'
 import { COLOR_PRIMARY_DARK } from '../../constants'
 import enhance from './enhancer'
 
@@ -20,7 +20,6 @@ const styles = {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: COLOR_PRIMARY_DARK,
   },
   input: {
     color: 'white',
@@ -58,18 +57,16 @@ export default class Login extends PureComponent {
     return (
       <KeyboardAvoidingView
         behavior="position"
-        style={{ flex: 1 }}
+        style={{
+          flex: 1,
+          backgroundColor: COLOR_PRIMARY_DARK,
+          paddingTop: Platform.OS === 'ios' ? 20 : 0,
+        }}
         contentContainerStyle={{ flex: 1 }}
       >
         <View style={styles.login}>
           <View style={{ flex: 1 }}>
-            <Image
-              style={{ flex: 1 }}
-              width={360}
-              height={360}
-              resizeMode="contain"
-              source={{ uri: 'logo_transparent' }}
-            />
+            <Logo />
           </View>
           <View style={styles.actions}>
             <View style={{ ...styles.actions, width: '70%' }}>
