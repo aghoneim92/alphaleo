@@ -92,6 +92,7 @@ const NewMessage = ({
         style={styles.content}
         value={content}
         multiline
+        blurOnSubmit={false}
         placeholder="Enter your Message"
         underlineColorAndroid="transparent"
         onChangeText={onContentChange}
