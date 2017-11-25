@@ -17,6 +17,7 @@ function setUserToken(token: string) {
   database.ref(`tokens/${auth.currentUser.uid}/${token}`).set(true)
 }
 
+// TODO: notification while foregrounded.
 async function registerNotifications() {
   try {
     const firebase = getFirebase()

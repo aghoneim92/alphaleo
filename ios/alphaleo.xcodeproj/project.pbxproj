@@ -699,6 +699,7 @@
 					"\"${PODS_ROOT}/Headers/Public/nanopb\"",
 				);
 				INFOPLIST_FILE = alphaleo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = org.alphaleo;
@@ -740,6 +741,7 @@
 					"\"${PODS_ROOT}/Headers/Public/nanopb\"",
 				);
 				INFOPLIST_FILE = alphaleo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = org.alphaleo;
