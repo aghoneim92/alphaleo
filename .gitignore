@@ -128,3 +128,7 @@ freeline_project_description.json
 .vscode
 
 flow-typed
+
+index.android.bundle*
+# produced files in android/app/src/main/res from node modules by react bundler
+node_modules*
