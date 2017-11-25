@@ -1,5 +1,5 @@
-/* eslint-disable */
 const functions = require('firebase-functions')
+const { keys, values, flatten } = require('ramda')
 
 const admin = require('firebase-admin')
 
@@ -11,6 +11,17 @@ exports.notifyAnnouncement = functions.database
     const { title, content } = event.data.val()
     const { announcementId } = event.params
 
+    const payload = {
+      notification: {
+        title,
+        body: content,
+        // icon
+      },
+      data: {
+        announcementId,
+      },
+    }
+
     return admin
       .database()
       .ref('/tokens')
@@ -20,25 +31,15 @@ exports.notifyAnnouncement = functions.database
           return Promise.resolve()
         }
 
-        const payload = {
-          notification: {
-            title,
-            body: content,
-            // icon
-          },
-          data: {
-            announcementId,
-          },
-        }
-
         const tokensMap = tokensSnapshot.val()
-        const tokens = Object.keys(tokensMap).map(uid => tokensMap[uid])
+        const tokens = flatten(values(tokensMap).map(keys))
+
+        console.log('tokens:', tokens)
 
         return admin
           .messaging()
           .sendToDevice(tokens, payload)
           .then(response => {
-            const tokensToRemove = []
             response.results.forEach((result, index) => {
               const error = result.error
               if (error) {
@@ -47,18 +48,8 @@ exports.notifyAnnouncement = functions.database
                   tokens[index],
                   error
                 )
-                // Cleanup the tokens who are not registered anymore.
-                if (
-                  error.code === 'messaging/invalid-registration-token' ||
-                  error.code === 'messaging/registration-token-not-registered'
-                ) {
-                  tokensToRemove.push(
-                    tokensSnapshot.ref.child(tokens[index]).remove()
-                  )
-                }
               }
             })
-            return Promise.all(tokensToRemove)
           })
       })
   })
