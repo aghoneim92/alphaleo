@@ -65,24 +65,12 @@ const Navigator = DrawerNavigator(
   },
 )
 
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: COLOR_PRIMARY,
-  },
-})
-
 export default class Main extends Component {
   componentDidMount() {
     registerNotifications()
   }
 
   render() {
-    return (
-      <View style={styles.container}>
-        <View style={{ paddingTop: Platform.OS === 'ios' ? 20 : 0 }}>
-          <Navigator />
-        </View>
-      </View>
-    )
+    return <Navigator />
   }
 }

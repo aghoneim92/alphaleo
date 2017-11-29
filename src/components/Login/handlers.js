@@ -9,7 +9,7 @@ import * as FBSDK from 'react-native-fbsdk'
 const { AccessToken, LoginManager } = FBSDK
 
 export default withHandlers({
-  onLoginWithEmailPress: props => async () => {
+  loginWithEmail: props => async () => {
     const { email, password, setErrorText, setSigningIn } = props
 
     setSigningIn(true)

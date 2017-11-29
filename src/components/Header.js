@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, View, StyleSheet, Platform } from 'react-native'
 
 import Icon from 'react-native-vector-icons/FontAwesome'
 
@@ -8,8 +8,9 @@ import { COLOR_PRIMARY } from '../constants'
 const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
-    height: 40,
+    height: Platform.OS === 'ios' ? 60 : 40,
     backgroundColor: COLOR_PRIMARY,
+    paddingTop: Platform.OS === 'ios' ? 20 : 0,
   },
   leftIconWrapper: {
     flex: 1,

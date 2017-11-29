@@ -1,4 +1,4 @@
-package org.alphaleo.alphaleo;
+package org.alphaleo;
 
 import org.junit.Test;
 
